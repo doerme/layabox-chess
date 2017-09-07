@@ -1,0 +1,260 @@
+{
+    "frames": {
+        "chess_bdt45.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "chess_blt45.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 0,
+                "y": 46
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "chess_kdt45.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 0,
+                "y": 92
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "chess_klt45.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 46,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "chess_ndt45.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 92,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "chess_nlt45.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 138,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "chess_pdt45.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 46,
+                "y": 46
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "chess_plt45.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 46,
+                "y": 92
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "chess_qdt45..png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 92,
+                "y": 46
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "chess_qlt45.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 138,
+                "y": 46
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "chess_rdt45.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 92,
+                "y": 92
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "chess_rlt45.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 45,
+                "x": 138,
+                "y": 92
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 45,
+                "w": 45
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 45,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        }
+    },
+    "meta": {
+        "image": "comp.png",
+        "prefix": "comp/"
+    }
+}
