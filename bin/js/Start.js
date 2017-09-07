@@ -5,8 +5,8 @@ var laya;
     var Start = /** @class */ (function () {
         function Start() {
             this.chessSource = {
-                whiteKing: "comp/chess_qlt45.png",
-                whiteQueen: "comp/chess_klt45.png",
+                whiteKing: "comp/chess_klt45.png",
+                whiteQueen: "comp/chess_qlt45.png",
                 whiteRook: "comp/chess_rlt45.png",
                 whiteBishop: "comp/chess_blt45.png",
                 whiteKnight: "comp/chess_nlt45.png",
@@ -48,9 +48,16 @@ var laya;
             Laya.loader.load("res/atlas/comp.json", Laya.Handler.create(this, this.onLoaded), null, Laya.Loader.ATLAS);
         }
         Start.prototype.onLoaded = function () {
-            Start.chessBoard = new ChessBorad();
-            Start.chessBoard.init();
+            this.drawChessBoard();
             this.drawChess();
+        };
+        Start.prototype.drawChessBoard = function () {
+            for (var row = 0; row < 8; row++) {
+                for (var col = 0; col < 8; col++) {
+                    Start.chessBoard = new ChessBorad();
+                    Start.chessBoard.init((row + col) % 2 == 0 ? '#d18b47' : '#ffce9e', row, col);
+                }
+            }
         };
         Start.prototype.drawChess = function () {
             for (var row = 0; row < 8; row++) {

@@ -6,8 +6,8 @@ module laya {
         public static chessBoard: ChessBorad; /** 棋盘 */
         public static chess: Chess; /** 棋子 */
         private chessSource = {
-            whiteKing: "comp/chess_qlt45.png",
-            whiteQueen: "comp/chess_klt45.png",
+            whiteKing: "comp/chess_klt45.png",
+            whiteQueen: "comp/chess_qlt45.png",
             whiteRook: "comp/chess_rlt45.png",
             whiteBishop: "comp/chess_blt45.png",
             whiteKnight: "comp/chess_nlt45.png",
@@ -51,9 +51,17 @@ module laya {
             Laya.loader.load("res/atlas/comp.json", Laya.Handler.create(this, this.onLoaded), null, Laya.Loader.ATLAS);
         }
         onLoaded(): void {
-            Start.chessBoard = new ChessBorad();
-            Start.chessBoard.init();
+            this.drawChessBoard();
             this.drawChess();
+        }
+        drawChessBoard(): void {
+            for(var row: number = 0; row < 8; row++){
+                for(var col: number = 0; col < 8; col++){
+                    Start.chessBoard = new ChessBorad();
+                    Start.chessBoard.init((row +　col)%2 == 0 ? '#d18b47' : '#ffce9e', row, col);
+                    
+                }
+            }
         }
         drawChess(): void {
             for(var row: number = 0; row < 8; row++){
