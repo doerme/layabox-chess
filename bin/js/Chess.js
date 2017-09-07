@@ -14,11 +14,13 @@ var Chess = /** @class */ (function (_super) {
         return _super.call(this) || this;
     }
     /** 绘制棋子 */
-    Chess.prototype.drawPiece = function () {
-        this.loadImage("comp/chess_bdt45.png");
+    Chess.prototype.drawPiece = function (chessSource, chessX, chessY) {
+        this.loadImage(chessSource);
         Laya.stage.addChild(this);
-        this.x = Laya.stage.width / 2;
-        this.y = Laya.stage.height / 2;
+        this.scaleX = 1.5;
+        this.scaleY = 1.5;
+        this.x = chessX;
+        this.y = chessY;
     };
     return Chess;
 }(Laya.Sprite));
