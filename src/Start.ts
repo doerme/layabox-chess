@@ -4,7 +4,6 @@ module laya {
 
     export class Start {
         public static chessBoard: ChessBorad; /** 棋盘 */
-        public static chess: Chess; /** 棋子 */
         private chessSource = {
             whiteKing: "comp/chess_klt45.png",
             whiteQueen: "comp/chess_qlt45.png",
@@ -52,37 +51,30 @@ module laya {
         }
         onLoaded(): void {
             this.drawChessBoard();
-            this.drawChess();
+            // this.drawChess();
         }
+        /** 棋子初始化 */
+        // 60 + col * 80, 205 + row * 80
         drawChessBoard(): void {
             for(var row: number = 0; row < 8; row++){
                 for(var col: number = 0; col < 8; col++){
                     Start.chessBoard = new ChessBorad();
-                    Start.chessBoard.init((row +　col)%2 == 0 ? '#d18b47' : '#ffce9e', row, col);
-                    
-                }
-            }
-        }
-        drawChess(): void {
-            for(var row: number = 0; row < 8; row++){
-                if(row > 1 && row < 6){
-                    continue;
-                }
-                for(var col: number = 0; col < 8; col++){
-                    Start.chess = new Chess();
+                    Start.chessBoard.row = row;
+                    Start.chessBoard.col = col;
+                    Start.chessBoard.init((row +　col)%2 == 0 ? '#d18b47' : '#ffce9e');
                     if(row == 0){
-                        Start.chess.drawPiece(this.chessArr[0][col], 60 + col * 80, 205 + row * 80);
+                        Start.chessBoard.drawPiece(this.chessArr[0][col]);
                     }else if(row == 1){
-                        Start.chess.drawPiece(this.chessSource.blackPawn, 60 + col * 80, 205 + row * 80);
+                        Start.chessBoard.drawPiece(this.chessSource.blackPawn);
                     }else if(row == 6){
-                        Start.chess.drawPiece(this.chessSource.whitePawn, 60 + col * 80, 205 + row * 80);
+                        Start.chessBoard.drawPiece(this.chessSource.whitePawn);
                     }else if(row == 7){
-                        Start.chess.drawPiece(this.chessArr[1][col], 60 + col * 80, 205 + row * 80);
+                        Start.chessBoard.drawPiece(this.chessArr[1][col]);
                     }
                 }
             }
         }
-        
+
     }
 }
 new laya.Start();

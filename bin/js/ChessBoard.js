@@ -11,12 +11,29 @@ var __extends = (this && this.__extends) || (function () {
 var ChessBorad = /** @class */ (function (_super) {
     __extends(ChessBorad, _super);
     function ChessBorad() {
-        return _super.call(this) || this;
+        var _this = _super.call(this) || this;
+        _this.chess = new Laya.Sprite();
+        Laya.stage.on(Laya.Event.CLICK, _this.chess, _this.onClick);
+        return _this;
     }
-    ChessBorad.prototype.init = function (color, row, col) {
+    ChessBorad.prototype.onClick = function () {
+        console.log(this.row, this.col);
+    };
+    /** 绘制格子 */
+    ChessBorad.prototype.init = function (color) {
         Laya.stage.addChild(this);
         // #d18b47 #ffce9e
-        this.graphics.drawRect(55 + col * 80, 200 + row * 80, 80, 80, color);
+        this.graphics.drawRect(55 + this.col * 80, 200 + this.row * 80, 80, 80, color);
+    };
+    /** 绘制棋子 */
+    // 60 + col * 80, 205 + row * 80
+    ChessBorad.prototype.drawPiece = function (chessSource) {
+        this.chess.loadImage(chessSource);
+        Laya.stage.addChild(this.chess);
+        this.chess.scaleX = 1.5;
+        this.chess.scaleY = 1.5;
+        this.chess.x = 60 + this.col * 80;
+        this.chess.y = 205 + this.row * 80;
     };
     return ChessBorad;
 }(Laya.Sprite));

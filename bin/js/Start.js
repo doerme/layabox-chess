@@ -49,34 +49,28 @@ var laya;
         }
         Start.prototype.onLoaded = function () {
             this.drawChessBoard();
-            this.drawChess();
+            // this.drawChess();
         };
+        /** 棋子初始化 */
+        // 60 + col * 80, 205 + row * 80
         Start.prototype.drawChessBoard = function () {
             for (var row = 0; row < 8; row++) {
                 for (var col = 0; col < 8; col++) {
                     Start.chessBoard = new ChessBorad();
-                    Start.chessBoard.init((row + col) % 2 == 0 ? '#d18b47' : '#ffce9e', row, col);
-                }
-            }
-        };
-        Start.prototype.drawChess = function () {
-            for (var row = 0; row < 8; row++) {
-                if (row > 1 && row < 6) {
-                    continue;
-                }
-                for (var col = 0; col < 8; col++) {
-                    Start.chess = new Chess();
+                    Start.chessBoard.row = row;
+                    Start.chessBoard.col = col;
+                    Start.chessBoard.init((row + col) % 2 == 0 ? '#d18b47' : '#ffce9e');
                     if (row == 0) {
-                        Start.chess.drawPiece(this.chessArr[0][col], 60 + col * 80, 205 + row * 80);
+                        Start.chessBoard.drawPiece(this.chessArr[0][col]);
                     }
                     else if (row == 1) {
-                        Start.chess.drawPiece(this.chessSource.blackPawn, 60 + col * 80, 205 + row * 80);
+                        Start.chessBoard.drawPiece(this.chessSource.blackPawn);
                     }
                     else if (row == 6) {
-                        Start.chess.drawPiece(this.chessSource.whitePawn, 60 + col * 80, 205 + row * 80);
+                        Start.chessBoard.drawPiece(this.chessSource.whitePawn);
                     }
                     else if (row == 7) {
-                        Start.chess.drawPiece(this.chessArr[1][col], 60 + col * 80, 205 + row * 80);
+                        Start.chessBoard.drawPiece(this.chessArr[1][col]);
                     }
                 }
             }
