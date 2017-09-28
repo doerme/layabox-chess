@@ -1,11 +1,6 @@
 class Chess extends Laya.Sprite {
     constructor() {
         super();
-        Laya.stage.on(Laya.Event.CLICK, this, this.onClick);
-    }
-
-    onClick():void {
-        console.log('1');
     }
 
     /** 绘制棋子 */
